@@ -1,0 +1,81 @@
+.input {
+  display: block;
+
+  label {
+    font-size: 12px;
+    font-weight: 500;
+    line-height: 15px;
+    letter-spacing: 0.04em;
+    text-align: left;
+  }
+
+  input {
+    width: 221px;
+    height: 40px;
+    background-color: #e0e0e0;
+    border-radius: 10px;
+    padding-left: 10px;
+    font-size: 12px;
+    font-weight: 500;
+    line-height: 15px;
+    letter-spacing: 0.04em;
+    text-align: left;
+    border: none;
+
+    &:focus {
+      outline: none;
+    }
+  }
+}
+
+.select-css {
+  width: 462px;
+  height: 40px;
+  background-color: #e0e0e0;
+  border-radius: 10px;
+  padding-left: 10px;
+  font-size: 12px;
+  font-weight: 500;
+  line-height: 15px;
+  letter-spacing: 0.04em;
+  text-align: left;
+  border: none;
+  display: block;
+  -moz-appearance: none;
+  -webkit-appearance: none;
+  appearance: none;
+  background-image: url("../icons/Arrow_Up_Dark.png");
+  background-repeat: no-repeat, repeat;
+  background-position: right 12.5px top 50%, 0 0;
+  background-size: 15px auto, 100%;
+}
+
+.select-css::-ms-expand {
+  display: none;
+}
+
+.select-css:focus {
+  outline: none;
+}
+
+.select-css option {
+  height: 50px;
+  font-size: 12px;
+  font-weight: 500;
+  line-height: 15px;
+  letter-spacing: 0.04em;
+  text-align: left;
+  color: #333333;
+  border: none;
+  outline: none;
+  background-color: #bdd9eb;
+  box-shadow: 0 15px 15px rgba(0, 0, 0, 0.15);
+  border-radius: 0 0 10px 10px;
+}
+
+*[dir="rtl"] .select-css,
+:root:lang(ar) .select-css,
+:root:lang(iw) .select-css {
+  background-position: left 0.7em top 50%, 0 0;
+  padding: 0.6em 0.8em 0.5em 1.4em;
+}

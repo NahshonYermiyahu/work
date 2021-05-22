@@ -1,0 +1,2146 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ЮрРобот</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+
+  <body class="body light-theme">
+    <header id="header" class="header">
+      <div class="header-left">
+        <a href="#">
+          <div class="header__logo"></div>
+        </a>
+
+        <div class="header__info">
+          <p class="header__info-number">132178469</p>
+          <p class="header__info-label">Вынесено решение</p>
+        </div>
+
+        <div class="header__info">
+          <p class="header__info-number">16537</p>
+          <p class="header__info-label">Подано в суд</p>
+        </div>
+
+        <div class="header__info">
+          <p class="header__info-number">73648</p>
+          <p class="header__info-label">В работе</p>
+        </div>
+
+        <div class="header__info">
+          <p class="header__info-number">726487</p>
+          <p class="header__info-label">Новый</p>
+        </div>
+
+        <div class="header__info">
+          <p class="header__info-number">3142536</p>
+          <p class="header__info-label">Отозвано</p>
+        </div>
+      </div>
+
+      <div class="header-right">
+        <div class="header__email dropdown-email">
+          <button onclick="renderPopup('#popup1')" type="button">
+            <div class="header__email-1"></div>
+          </button>
+
+          <div class="dropdown-email__content">
+            <div class="dropdown-email__item">
+              <div class="dropdown-email__item-left">
+                <img src="icons/Ellipse_8.png" alt="ellipse" />
+              </div>
+              <div class="dropdown-email__item-right">
+                <div class="dropdown-email__item-heading">ЮРРОБОТ</div>
+                <div class="dropdown-email__item-text">
+                  <p>Кузовенковой Л.Н. выставлен счет на оплату</p>
+                </div>
+                <div class="dropdown-email__item-date">
+                  <p class="dropdown-email__item-day">19.03.2021</p>
+                  <p class="dropdown-email__item-time">09:43</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="dropdown-email__item">
+              <div class="dropdown-email__item-left">
+                <img src="icons/Ellipse_8.png" alt="ellipse" />
+              </div>
+              <div class="dropdown-email__item-right">
+                <div class="dropdown-email__item-heading">ЮРРОБОТ</div>
+                <div class="dropdown-email__item-text">
+                  <p>Кузовенковой Л.Н. выставлен счет на оплату</p>
+                </div>
+                <div class="dropdown-email__item-date">
+                  <p class="dropdown-email__item-day">19.03.2021</p>
+                  <p class="dropdown-email__item-time">09:43</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <button onclick="renderPopup('#popup2')" type="button">
+          <div class="header__bell"></div>
+        </button>
+
+        <div class="header__user dropdown__user">
+          <div class="header__user-data">
+            <div class="header__user-img"></div>
+            <!-- <img src="icons/avatar.png" alt="avatar" /> -->
+            <div class="header__user-block">
+              <p class="header__user-name">МП ГПЩ "ДЕЗ ЖКХ"</p>
+              <p class="header__user-sum">50 300 ₽</p>
+            </div>
+            <button
+              onclick="dropdownUser()"
+              class="header__user-arrow"
+            ></button>
+          </div>
+
+          <div id="dropdown-user" class="dropdown__user-content">
+            <div class="chekbox">
+              <p>Изменение темы</p>
+              <label class="switch">
+                <input id="checkbox-theme" type="checkbox" />
+                <span class="slider round"></span>
+              </label>
+            </div>
+            <div>
+              <button class="dropdown__user-btn" type="button">
+                Сменить пароль
+              </button>
+            </div>
+            <div>
+              <button class="dropdown__user-btn" type="button">Выход</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="header__logout">
+          <button type="button"></button>
+        </div>
+      </div>
+    </header>
+    <!-- /.header -->
+
+    <div class="container">
+      <section id="sidebar" class="sidebar">
+        <div id="sidebar-items" class="sidebar-items">
+          <button
+            class="sidebar__item"
+            onclick="sidebarBtn(this)"
+            type="button"
+          >
+            <div class="sidebar__item-img img1"></div>
+            <p class="sidebar__item-label">Рабочий стол</p>
+          </button>
+
+          <button
+            class="sidebar__item"
+            onclick="sidebarBtn(this)"
+            type="button"
+          >
+            <div class="sidebar__item-img img2"></div>
+            <p class="sidebar__item-label">Организации</p>
+          </button>
+
+          <button
+            class="sidebar__item"
+            onclick="sidebarBtn(this)"
+            type="button"
+          >
+            <div class="sidebar__item-img img3"></div>
+            <p class="sidebar__item-label">Работа с должниками</p>
+          </button>
+
+          <button
+            class="sidebar__item"
+            onclick="sidebarBtn(this)"
+            type="button"
+          >
+            <div class="sidebar__item-img img4"></div>
+            <p class="sidebar__item-label">Обмен данными</p>
+          </button>
+
+          <button
+            class="sidebar__item"
+            onclick="sidebarBtn(this)"
+            type="button"
+          >
+            <div class="sidebar__item-img img5"></div>
+            <p class="sidebar__item-label">Панель управления</p>
+          </button>
+        </div>
+
+        <div class="sidebar__footer">
+          <p>
+            &copy; Юрробот 2017-2021<br />
+            &nbsp; &nbsp; Версия 1.4.2 (pre-release)
+          </p>
+        </div>
+      </section>
+      <!-- /.sidebar -->
+
+      <section id="content" class="content">
+        <button
+          id="content-sidebar"
+          type="button"
+          onclick="changeSidebar(this)"
+          class="content__sidebar"
+        ></button>
+
+        <div class="content__body">
+          <h1>Организации</h1>
+
+          <div class="search-buttons">
+            <div class="search"></div>
+
+            <div>
+              <button
+                onclick="renderPopup('#popup3')"
+                type="button"
+                class="btn-body btn-body-dark"
+              >
+                Добавить организацию
+              </button>
+              <button
+                onclick="renderPopup('#popup5')"
+                type="button"
+                class="btn-body btn-body-bridht"
+              >
+                Установить по умолчанию
+              </button>
+            </div>
+          </div>
+
+          <div id="main-table-container" class="main-table-container">
+            <div class="table">
+              <table
+                id="main-table__header"
+                class="main-table main-table__header"
+              >
+                <tr>
+                  <th class="main-table__checked">
+                    <div class="checkbox">
+                      <input
+                        id="main-table-select-all"
+                        class="checkbox-input"
+                        type="checkbox"
+                      />
+                      <label
+                        for="main-table-select-all"
+                        class="checkbox-label"
+                      ></label>
+                    </div>
+                  </th>
+                  <th class="main-table__max-name">
+                    <div class="header-item">
+                      <p>Полное наименование</p>
+                      <div class="th-sort-icon"></div>
+                    </div>
+                  </th>
+                  <th class="main-table__min-name">
+                    <div class="header-item">
+                      <p>Сокращённое наименование</p>
+                      <div class="th-sort-icon"></div>
+                    </div>
+                  </th>
+                  <th class="main-table__inn">
+                    <div class="header-item">
+                      <p>ИНН</p>
+                      <div class="th-sort-icon"></div>
+                    </div>
+                  </th>
+                  <th class="main-table__address">
+                    <div class="header-item">
+                      <p>Юридический адрес</p>
+                      <div class="th-sort-icon"></div>
+                    </div>
+                  </th>
+                </tr>
+              </table>
+
+              <div class="search-box">
+                <input
+                  class="search-box__input search-full-name"
+                  type="text"
+                  placeholder="Введите текст..."
+                />
+
+                <input
+                  class="search-box__input search-min-name"
+                  type="text"
+                  placeholder="Введите текст..."
+                />
+
+                <input
+                  class="search-box__input search-inn"
+                  type="text"
+                  placeholder="Введите текст..."
+                />
+
+                <input
+                  class="search-box__input search-addres"
+                  type="text"
+                  placeholder="Введите текст..."
+                />
+              </div>
+
+              <div class="main-table__items-container">
+                <table
+                  id="main-table__items"
+                  class="main-table main-table__items"
+                >
+                  <tr class="main-table__item">
+                    <td class="main-table__checked">
+                      <div class="checkbox">
+                        <input
+                          id="main-item1"
+                          class="checkbox-input"
+                          type="checkbox"
+                        />
+                        <label for="main-item1" class="checkbox-label"></label>
+                      </div>
+                    </td>
+                    <td class="main-table__max-name">
+                      МУНИЦИПАЛЬНОЕ ПРЕДПРИЯТИЕ ГОРОДСКОГО ПОСЕЛЕНИЯ ЩЁЛКОВО
+                      "ДИРЕКЦИЯ ЕДИНОГО ЗАКАЗЧИКА ЖИЛИЩНО-КОММУНАЛЬНОГО
+                      ХОЗЯЙСТВА"
+                    </td>
+                    <td class="main-table__min-name">МП ГПЩ "ДЕЗ ЖКХ"</td>
+                    <td class="main-table__inn">0122333334</td>
+                    <td class="main-table__address">
+                      141108, обл. Московская, г. Щелково, ул. Краснознаменская,
+                      д.3
+                    </td>
+                    <td class="item__edit">
+                      <div class="item__edit-block">
+                        <button
+                          type="button"
+                          class="edit-block__btn btn-item-hidden"
+                          onclick="hiddenRowTable(this)"
+                        ></button>
+                        <button
+                          type="button"
+                          class="edit-block__btn btn-item-edit"
+                          onclick="renderPopup('#popup6')"
+                        ></button>
+                        <button
+                          type="button"
+                          class="edit-block__btn btn-item-remove"
+                          onclick="removeRowTable(this)"
+                        ></button>
+                      </div>
+                    </td>
+                  </tr>
+                  <tr class="main-table__item">
+                    <td class="main-table__checked">
+                      <div class="checkbox">
+                        <input
+                          id="main-item2"
+                          class="checkbox-input"
+                          type="checkbox"
+                        />
+                        <label for="main-item2" class="checkbox-label"></label>
+                      </div>
+                    </td>
+                    <td class="main-table__max-name">
+                      МУНИЦИПАЛЬНОЕ ПРЕДПРИЯТИЕ ГОРОДСКОГО ПОСЕЛЕНИЯ ЩЁЛКОВО
+                      "ДИРЕКЦИЯ ЕДИНОГО ЗАКАЗЧИКА ЖИЛИЩНО-КОММУНАЛЬНОГО
+                      ХОЗЯЙСТВА"
+                    </td>
+                    <td class="main-table__min-name">МП ГПЩ "ДЕЗ ЖКХ"</td>
+                    <td class="main-table__inn">1122333334</td>
+                    <td class="main-table__address">
+                      141108, обл. Московская, г. Щелково, ул. Краснознаменская,
+                      д.3
+                    </td>
+                    <td class="item__edit">
+                      <div class="item__edit-block">
+                        <button
+                          type="button"
+                          class="edit-block__btn btn-item-hidden"
+                          onclick="hiddenRowTable(this)"
+                        ></button>
+                        <button
+                          type="button"
+                          class="edit-block__btn btn-item-edit"
+                          onclick="renderPopup('#popup6')"
+                        ></button>
+                        <button
+                          type="button"
+                          class="edit-block__btn btn-item-remove"
+                          onclick="removeRowTable(this)"
+                        ></button>
+                      </div>
+                    </td>
+                  </tr>
+                  <tr class="main-table__item">
+                    <td class="main-table__checked">
+                      <div class="checkbox">
+                        <input
+                          id="main-item3"
+                          class="checkbox-input"
+                          type="checkbox"
+                        />
+                        <label for="main-item3" class="checkbox-label"></label>
+                      </div>
+                    </td>
+                    <td class="main-table__max-name">
+                      МУНИЦИПАЛЬНОЕ ПРЕДПРИЯТИЕ ГОРОДСКОГО ПОСЕЛЕНИЯ ЩЁЛКОВО
+                      "ДИРЕКЦИЯ ЕДИНОГО ЗАКАЗЧИКА ЖИЛИЩНО-КОММУНАЛЬНОГО
+                      ХОЗЯЙСТВА"
+                    </td>
+                    <td class="main-table__min-name">МП ГПЩ "ДЕЗ ЖКХ"</td>
+                    <td class="main-table__inn">2122333334</td>
+                    <td class="main-table__address">
+                      141108, обл. Московская, г. Щелково, ул. Краснознаменская,
+                      д.3
+                    </td>
+                    <td class="item__edit">
+                      <div class="item__edit-block">
+                        <button
+                          type="button"
+                          class="edit-block__btn btn-item-hidden"
+                          onclick="hiddenRowTable(this)"
+                        ></button>
+                        <button
+                          type="button"
+                          class="edit-block__btn btn-item-edit"
+                          onclick="renderPopup('#popup6')"
+                        ></button>
+                        <button
+                          type="button"
+                          class="edit-block__btn btn-item-remove"
+                          onclick="removeRowTable(this)"
+                        ></button>
+                      </div>
+                    </td>
+                  </tr>
+                  <tr class="main-table__item">
+                    <td class="main-table__checked">
+                      <div class="checkbox">
+                        <input
+                          id="main-item4"
+                          class="checkbox-input"
+                          type="checkbox"
+                        />
+                        <label for="main-item4" class="checkbox-label"></label>
+                      </div>
+                    </td>
+                    <td class="main-table__max-name">
+                      МУНИЦИПАЛЬНОЕ ПРЕДПРИЯТИЕ ГОРОДСКОГО ПОСЕЛЕНИЯ ЩЁЛКОВО
+                      "ДИРЕКЦИЯ ЕДИНОГО ЗАКАЗЧИКА ЖИЛИЩНО-КОММУНАЛЬНОГО
+                      ХОЗЯЙСТВА"
+                    </td>
+                    <td class="main-table__min-name">МП ГПЩ "ДЕЗ ЖКХ"</td>
+                    <td class="main-table__inn">3122333334</td>
+                    <td class="main-table__address">
+                      141108, обл. Московская, г. Щелково, ул. Краснознаменская,
+                      д.3
+                    </td>
+                    <td class="item__edit">
+                      <div class="item__edit-block">
+                        <button
+                          type="button"
+                          class="edit-block__btn btn-item-hidden"
+                          onclick="hiddenRowTable(this)"
+                        ></button>
+                        <button
+                          type="button"
+                          class="edit-block__btn btn-item-edit"
+                          onclick="renderPopup('#popup6')"
+                        ></button>
+                        <button
+                          type="button"
+                          class="edit-block__btn btn-item-remove"
+                          onclick="removeRowTable(this)"
+                        ></button>
+                      </div>
+                    </td>
+                  </tr>
+                  <tr class="main-table__item">
+                    <td class="main-table__checked">
+                      <div class="checkbox">
+                        <input
+                          id="main-item5"
+                          class="checkbox-input"
+                          type="checkbox"
+                        />
+                        <label for="main-item5" class="checkbox-label"></label>
+                      </div>
+                    </td>
+                    <td class="main-table__max-name">
+                      МУНИЦИПАЛЬНОЕ ПРЕДПРИЯТИЕ ГОРОДСКОГО ПОСЕЛЕНИЯ ЩЁЛКОВО
+                      "ДИРЕКЦИЯ ЕДИНОГО ЗАКАЗЧИКА ЖИЛИЩНО-КОММУНАЛЬНОГО
+                      ХОЗЯЙСТВА"
+                    </td>
+                    <td class="main-table__min-name">МП ГПЩ "ДЕЗ ЖКХ"</td>
+                    <td class="main-table__inn">4122333334</td>
+                    <td class="main-table__address">
+                      141108, обл. Московская, г. Щелково, ул. Краснознаменская,
+                      д.3
+                    </td>
+                    <td class="item__edit">
+                      <div class="item__edit-block">
+                        <button
+                          type="button"
+                          class="edit-block__btn btn-item-hidden"
+                          onclick="hiddenRowTable(this)"
+                        ></button>
+                        <button
+                          type="button"
+                          class="edit-block__btn btn-item-edit"
+                          onclick="renderPopup('#popup6')"
+                        ></button>
+                        <button
+                          type="button"
+                          class="edit-block__btn btn-item-remove"
+                          onclick="removeRowTable(this)"
+                        ></button>
+                      </div>
+                    </td>
+                  </tr>
+                  <tr class="main-table__item">
+                    <td class="main-table__checked">
+                      <div class="checkbox">
+                        <input
+                          id="main-item6"
+                          class="checkbox-input"
+                          type="checkbox"
+                        />
+                        <label for="main-item6" class="checkbox-label"></label>
+                      </div>
+                    </td>
+                    <td class="main-table__max-name">
+                      МУНИЦИПАЛЬНОЕ ПРЕДПРИЯТИЕ ГОРОДСКОГО ПОСЕЛЕНИЯ ЩЁЛКОВО
+                      "ДИРЕКЦИЯ ЕДИНОГО ЗАКАЗЧИКА ЖИЛИЩНО-КОММУНАЛЬНОГО
+                      ХОЗЯЙСТВА"
+                    </td>
+                    <td class="main-table__min-name">МП ГПЩ "ДЕЗ ЖКХ"</td>
+                    <td class="main-table__inn">5122333334</td>
+                    <td class="main-table__address">
+                      141108, обл. Московская, г. Щелково, ул. Краснознаменская,
+                      д.3
+                    </td>
+                    <td class="item__edit">
+                      <div class="item__edit-block">
+                        <button
+                          type="button"
+                          class="edit-block__btn btn-item-hidden"
+                          onclick="hiddenRowTable(this)"
+                        ></button>
+                        <button
+                          type="button"
+                          class="edit-block__btn btn-item-edit"
+                          onclick="renderPopup('#popup6')"
+                        ></button>
+                        <button
+                          type="button"
+                          class="edit-block__btn btn-item-remove"
+                          onclick="removeRowTable(this)"
+                        ></button>
+                      </div>
+                    </td>
+                  </tr>
+                  <tr class="main-table__item">
+                    <td class="main-table__checked">
+                      <div class="checkbox">
+                        <input
+                          id="main-item7"
+                          class="checkbox-input"
+                          type="checkbox"
+                        />
+                        <label for="main-item7" class="checkbox-label"></label>
+                      </div>
+                    </td>
+                    <td class="main-table__max-name">
+                      МУНИЦИПАЛЬНОЕ ПРЕДПРИЯТИЕ ГОРОДСКОГО ПОСЕЛЕНИЯ ЩЁЛКОВО
+                      "ДИРЕКЦИЯ ЕДИНОГО ЗАКАЗЧИКА ЖИЛИЩНО-КОММУНАЛЬНОГО
+                      ХОЗЯЙСТВА"
+                    </td>
+                    <td class="main-table__min-name">МП ГПЩ "ДЕЗ ЖКХ"</td>
+                    <td class="main-table__inn">6122333334</td>
+                    <td class="main-table__address">
+                      141108, обл. Московская, г. Щелково, ул. Краснознаменская,
+                      д.3
+                    </td>
+                    <td class="item__edit">
+                      <div class="item__edit-block">
+                        <button
+                          type="button"
+                          class="edit-block__btn btn-item-hidden"
+                          onclick="hiddenRowTable(this)"
+                        ></button>
+                        <button
+                          type="button"
+                          class="edit-block__btn btn-item-edit"
+                          onclick="renderPopup('#popup6')"
+                        ></button>
+                        <button
+                          type="button"
+                          class="edit-block__btn btn-item-remove"
+                          onclick="removeRowTable(this)"
+                        ></button>
+                      </div>
+                    </td>
+                  </tr>
+                  <tr class="main-table__item">
+                    <td class="main-table__checked">
+                      <div class="checkbox">
+                        <input
+                          id="main-item8"
+                          class="checkbox-input"
+                          type="checkbox"
+                        />
+                        <label for="main-item8" class="checkbox-label"></label>
+                      </div>
+                    </td>
+                    <td class="main-table__max-name">
+                      МУНИЦИПАЛЬНОЕ ПРЕДПРИЯТИЕ ГОРОДСКОГО ПОСЕЛЕНИЯ ЩЁЛКОВО
+                      "ДИРЕКЦИЯ ЕДИНОГО ЗАКАЗЧИКА ЖИЛИЩНО-КОММУНАЛЬНОГО
+                      ХОЗЯЙСТВА"
+                    </td>
+                    <td class="main-table__min-name">МП ГПЩ "ДЕЗ ЖКХ"</td>
+                    <td class="main-table__inn">7122333334</td>
+                    <td class="main-table__address">
+                      141108, обл. Московская, г. Щелково, ул. Краснознаменская,
+                      д.3
+                    </td>
+                    <td class="item__edit">
+                      <div class="item__edit-block">
+                        <button
+                          type="button"
+                          class="edit-block__btn btn-item-hidden"
+                          onclick="hiddenRowTable(this)"
+                        ></button>
+                        <button
+                          type="button"
+                          class="edit-block__btn btn-item-edit"
+                          onclick="renderPopup('#popup6')"
+                        ></button>
+                        <button
+                          type="button"
+                          class="edit-block__btn btn-item-remove"
+                          onclick="removeRowTable(this)"
+                        ></button>
+                      </div>
+                    </td>
+                  </tr>
+                  <tr class="main-table__item">
+                    <td class="main-table__checked">
+                      <div class="checkbox">
+                        <input
+                          id="main-item9"
+                          class="checkbox-input"
+                          type="checkbox"
+                        />
+                        <label for="main-item9" class="checkbox-label"></label>
+                      </div>
+                    </td>
+                    <td class="main-table__max-name">
+                      МУНИЦИПАЛЬНОЕ ПРЕДПРИЯТИЕ ГОРОДСКОГО ПОСЕЛЕНИЯ ЩЁЛКОВО
+                      "ДИРЕКЦИЯ ЕДИНОГО ЗАКАЗЧИКА ЖИЛИЩНО-КОММУНАЛЬНОГО
+                      ХОЗЯЙСТВА"
+                    </td>
+                    <td class="main-table__min-name">МП ГПЩ "ДЕЗ ЖКХ"</td>
+                    <td class="main-table__inn">8122333334</td>
+                    <td class="main-table__address">
+                      141108, обл. Московская, г. Щелково, ул. Краснознаменская,
+                      д.3
+                    </td>
+                    <td class="item__edit">
+                      <div class="item__edit-block">
+                        <button
+                          type="button"
+                          class="edit-block__btn btn-item-hidden"
+                          onclick="hiddenRowTable(this)"
+                        ></button>
+                        <button
+                          type="button"
+                          class="edit-block__btn btn-item-edit"
+                          onclick="renderPopup('#popup6')"
+                        ></button>
+                        <button
+                          type="button"
+                          class="edit-block__btn btn-item-remove"
+                          onclick="removeRowTable(this)"
+                        ></button>
+                      </div>
+                    </td>
+                  </tr>
+                  <tr class="main-table__item">
+                    <td class="main-table__checked">
+                      <div class="checkbox">
+                        <input
+                          id="main-item10"
+                          class="checkbox-input"
+                          type="checkbox"
+                        />
+                        <label for="main-item10" class="checkbox-label"></label>
+                      </div>
+                    </td>
+                    <td class="main-table__max-name">
+                      МУНИЦИПАЛЬНОЕ ПРЕДПРИЯТИЕ ГОРОДСКОГО ПОСЕЛЕНИЯ ЩЁЛКОВО
+                      "ДИРЕКЦИЯ ЕДИНОГО ЗАКАЗЧИКА ЖИЛИЩНО-КОММУНАЛЬНОГО
+                      ХОЗЯЙСТВА"
+                    </td>
+                    <td class="main-table__min-name">МП ГПЩ "ДЕЗ ЖКХ"</td>
+                    <td class="main-table__inn">9122333334</td>
+                    <td class="main-table__address">
+                      141108, обл. Московская, г. Щелково, ул. Краснознаменская,
+                      д.3
+                    </td>
+                    <td class="item__edit">
+                      <div class="item__edit-block">
+                        <button
+                          type="button"
+                          class="edit-block__btn btn-item-hidden"
+                          onclick="hiddenRowTable(this)"
+                        ></button>
+                        <button
+                          type="button"
+                          class="edit-block__btn btn-item-edit"
+                          onclick="renderPopup('#popup6')"
+                        ></button>
+                        <button
+                          type="button"
+                          class="edit-block__btn btn-item-remove"
+                          onclick="removeRowTable(this)"
+                        ></button>
+                      </div>
+                    </td>
+                  </tr>
+                </table>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- /.content -->
+
+      <!-- popup 1 -->
+      <div id="popup1" class="popup">
+        <a href="#section" class="popup__area"></a>
+        <div class="popup__content message">
+          <div class="popup__content-header">
+            <p class="content__header-title">Сообщение</p>
+            <a href="#section" class="popup__close">
+              <img src="icons/close-icon.png" alt="close-icon" />
+            </a>
+          </div>
+          <div class="popup__content-items">
+            <div class="item selected">
+              <div class="item-inner">
+                <div class="item__icon"></div>
+                <div class="item__description">
+                  <p class="item__description-title">ЮРРОБОТ</p>
+                  <p class="item__description-text">
+                    Кузовенковой Л.Н выставлен счет на оплату
+                  </p>
+                </div>
+                <div class="item__time">
+                  <p>19.01.1970 08:39</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="item">
+              <div class="item-inner">
+                <div class="item__icon"></div>
+                <div class="item__description">
+                  <p class="item__description-title">ЮРРОБОТ</p>
+                  <p class="item__description-text">
+                    Кузовенковой Л.Н выставлен счет на оплату
+                  </p>
+                </div>
+                <div class="item__time">
+                  <p>19.01.1970 08:39</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="item">
+              <div class="item-inner">
+                <div class="item__icon"></div>
+                <div class="item__description">
+                  <p class="item__description-title">ЮРРОБОТ</p>
+                  <p class="item__description-text">
+                    Кузовенковой Л.Н выставлен счет на оплату
+                  </p>
+                </div>
+                <div class="item__time">
+                  <p>19.01.1970 08:39</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="item">
+              <div class="item-inner">
+                <div class="item__icon"></div>
+                <div class="item__description">
+                  <p class="item__description-title">ЮРРОБОТ</p>
+                  <p class="item__description-text">
+                    Кузовенковой Л.Н выставлен счет на оплату
+                  </p>
+                </div>
+                <div class="item__time">
+                  <p>19.01.1970 08:39</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="item selected">
+              <div class="item-inner">
+                <div class="item__icon"></div>
+                <div class="item__description">
+                  <p class="item__description-title">ЮРРОБОТ</p>
+                  <p class="item__description-text">
+                    Кузовенковой Л.Н выставлен счет на оплату
+                  </p>
+                </div>
+                <div class="item__time">
+                  <p>19.01.1970 08:39</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="item">
+              <div class="item-inner">
+                <div class="item__icon"></div>
+                <div class="item__description">
+                  <p class="item__description-title">ЮРРОБОТ</p>
+                  <p class="item__description-text">
+                    Кузовенковой Л.Н выставлен счет на оплату
+                  </p>
+                </div>
+                <div class="item__time">
+                  <p>19.01.1970 08:39</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="item">
+              <div class="item-inner">
+                <div class="item__icon"></div>
+                <div class="item__description">
+                  <p class="item__description-title">ЮРРОБОТ</p>
+                  <p class="item__description-text">
+                    Кузовенковой Л.Н выставлен счет на оплату
+                  </p>
+                </div>
+                <div class="item__time">
+                  <p>19.01.1970 08:39</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="item">
+              <div class="item-inner">
+                <div class="item__icon"></div>
+                <div class="item__description">
+                  <p class="item__description-title">ЮРРОБОТ</p>
+                  <p class="item__description-text">
+                    Кузовенковой Л.Н выставлен счет на оплату
+                  </p>
+                </div>
+                <div class="item__time">
+                  <p>19.01.1970 08:39</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="item selected">
+              <div class="item-inner">
+                <div class="item__icon"></div>
+                <div class="item__description">
+                  <p class="item__description-title">ЮРРОБОТ</p>
+                  <p class="item__description-text">
+                    Кузовенковой Л.Н выставлен счет на оплату
+                  </p>
+                </div>
+                <div class="item__time">
+                  <p>19.01.1970 08:39</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="item">
+              <div class="item-inner">
+                <div class="item__icon"></div>
+                <div class="item__description">
+                  <p class="item__description-title">ЮРРОБОТ</p>
+                  <p class="item__description-text">
+                    Кузовенковой Л.Н выставлен счет на оплату
+                  </p>
+                </div>
+                <div class="item__time">
+                  <p>19.01.1970 08:39</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="item">
+              <div class="item-inner">
+                <div class="item__icon"></div>
+                <div class="item__description">
+                  <p class="item__description-title">ЮРРОБОТ</p>
+                  <p class="item__description-text">
+                    Кузовенковой Л.Н выставлен счет на оплату
+                  </p>
+                </div>
+                <div class="item__time">
+                  <p>19.01.1970 08:39</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="item">
+              <div class="item-inner">
+                <div class="item__icon"></div>
+                <div class="item__description">
+                  <p class="item__description-title">ЮРРОБОТ</p>
+                  <p class="item__description-text">
+                    Кузовенковой Л.Н выставлен счет на оплату
+                  </p>
+                </div>
+                <div class="item__time">
+                  <p>19.01.1970 08:39</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="popup__content-footer">
+            <button type="button" class="btn btn-bright">Удалить все</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- popup 2 -->
+      <div id="popup2" class="popup">
+        <a href="#section" class="popup__area"></a>
+        <div class="popup__content message">
+          <div class="popup__content-header">
+            <p class="content__header-title">Сообщение</p>
+            <a href="#section" class="popup__close">
+              <img src="icons/close-icon.png" alt="close-icon" />
+            </a>
+          </div>
+
+          <div class="popup__content-items">
+            <div class="item selected">
+              <div class="item-inner">
+                <div class="item__icon"></div>
+                <div class="item__description">
+                  <p class="item__description-text">
+                    Подписание судебного приказа по ЭЦП
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <div class="item">
+              <div class="item-inner">
+                <div class="item__icon"></div>
+                <div class="item__description">
+                  <p class="item__description-text">
+                    Подписание судебного приказа по ЭЦП
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <div class="item">
+              <div class="item-inner">
+                <div class="item__icon"></div>
+                <div class="item__description">
+                  <p class="item__description-text">
+                    Подписание судебного приказа по ЭЦП
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <div class="item">
+              <div class="item-inner">
+                <div class="item__icon"></div>
+                <div class="item__description">
+                  <p class="item__description-text">
+                    Подписание судебного приказа по ЭЦП
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <div class="item selected">
+              <div class="item-inner">
+                <div class="item__icon"></div>
+                <div class="item__description">
+                  <p class="item__description-text">
+                    Подписание судебного приказа по ЭЦП
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <div class="item">
+              <div class="item-inner">
+                <div class="item__icon"></div>
+                <div class="item__description">
+                  <p class="item__description-text">
+                    Подписание судебного приказа по ЭЦП
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <div class="item">
+              <div class="item-inner">
+                <div class="item__icon"></div>
+                <div class="item__description">
+                  <p class="item__description-text">
+                    Подписание судебного приказа по ЭЦП
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <div class="item">
+              <div class="item-inner">
+                <div class="item__icon"></div>
+                <div class="item__description">
+                  <p class="item__description-text">
+                    Подписание судебного приказа по ЭЦП
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <div class="item selected">
+              <div class="item-inner">
+                <div class="item__icon"></div>
+                <div class="item__description">
+                  <p class="item__description-text">
+                    Подписание судебного приказа по ЭЦП
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <div class="item">
+              <div class="item-inner">
+                <div class="item__icon"></div>
+                <div class="item__description">
+                  <p class="item__description-text">
+                    Подписание судебного приказа по ЭЦП
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <div class="item">
+              <div class="item-inner">
+                <div class="item__icon"></div>
+                <div class="item__description">
+                  <p class="item__description-text">
+                    Подписание судебного приказа по ЭЦП
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <div class="item">
+              <div class="item-inner">
+                <div class="item__icon"></div>
+                <div class="item__description">
+                  <p class="item__description-text">
+                    Подписание судебного приказа по ЭЦП
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="popup__content-footer">
+            <button type="button" class="btn btn-bright">Удалить все</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- popup 3 -->
+      <div id="popup3" class="popup">
+        <a href="#section" class="popup__area"></a>
+        <div class="popup__content add-company">
+          <div class="popup__content-header">
+            <p class="content__header-title">ИНН организации</p>
+            <a href="#section" class="popup__close">
+              <img src="icons/close-icon.png" alt="close-icon" />
+            </a>
+          </div>
+
+          <div class="popup__content-items">
+            <div class="item">
+              <input
+                type="text"
+                class="item__input"
+                placeholder="Введите ИНН новой компании"
+              />
+            </div>
+          </div>
+
+          <div class="popup__content-footer">
+            <a href="#section" class="btn btn-bright">Отменить</a>
+            <button
+              onclick="renderPopup('#popup4')"
+              type="button"
+              class="btn btn-dark"
+            >
+              Подтвердить
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <!-- popup 4 -->
+      <div id="popup4" class="popup">
+        <a href="#section" class="popup__area"></a>
+        <div class="popup__content info">
+          <div class="popup__content-header">
+            <a href="#section" class="popup__close">
+              <img src="icons/close-icon.png" alt="close-icon" />
+            </a>
+          </div>
+          <div class="popup__content-items">
+            <div class="item">
+              <div class="item__description">
+                <p class="item__description-text">
+                  Организация “ОООООО” успешно добавлена
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- popup 5 -->
+      <div id="popup5" class="popup">
+        <a href="#section" class="popup__area"></a>
+        <div class="popup__content info">
+          <div class="popup__content-header">
+            <a href="#section" class="popup__close">
+              <img src="icons/close-icon.png" alt="close-icon" />
+            </a>
+          </div>
+          <div class="popup__content-items">
+            <div class="item">
+              <div class="item__description">
+                <p class="item__description-text">
+                  Организация “ОООООО” успешно установлена по умолчанию
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- popup 6 -->
+      <div id="popup6" class="popup">
+        <a href="#section" class="popup__area"></a>
+
+        <div class="popup__content edit-company">
+          <div class="popup__content-header">
+            <p class="content__header-title">МП ГПЩ "ДЕЗ ЖКХ"</p>
+
+            <div class="content__header-btns">
+              <input
+                id="eс__isactive-edit-btn"
+                class="isactive-edit-btn__input"
+                type="checkbox"
+              />
+              <label
+                for="eс__isactive-edit-btn"
+                class="isactive-edit-btn__label"
+              >
+                <p>Режим редактирования</p>
+              </label>
+
+              <a href="#section" class="popup__close">
+                <img src="icons/close-icon.png" alt="close-icon" />
+              </a>
+            </div>
+          </div>
+
+          <div class="popup__content-items">
+            <div class="popup-edit__header">
+              <button
+                class="
+                  popup-edit__btn
+                  popup-edit__btn-all-info
+                  popup-edit__btn-active
+                "
+              >
+                <div class="popup-edit__btn-title">
+                  <p>Общая информация</p>
+                  <div class="popup-edit__btn-title-icon"></div>
+                </div>
+                <div class="btn-line"></div>
+              </button>
+              <button class="popup-edit__btn popup-edit__btn-staff">
+                <div class="popup-edit__btn-title">
+                  <p>Сотрудники</p>
+                  <div class="popup-edit__btn-title-icon"></div>
+                </div>
+                <div class="btn-line"></div>
+              </button>
+              <button class="popup-edit__btn popup-edit__btn-docs">
+                <div class="popup-edit__btn-title">
+                  <p>Документы</p>
+                  <div class="popup-edit__btn-title-icon"></div>
+                </div>
+                <div class="btn-line"></div>
+              </button>
+            </div>
+
+            <!-- Контейнер для вкладки "Общая информация" -->
+            <div class="tab tab-all-info tab-active">
+              <!-- Контейнер для вкладки "Общая информация (просмотр)" -->
+              <div
+                id="tab-all-info__view"
+                class="tab-all-info__view tab-isactive"
+              >
+                <!-- Шапка -->
+                <div class="tab-all-info__header">
+                  <p>Общие данные организации</p>
+                </div>
+
+                <!-- Название -->
+                <div class="tab-all-info__item">
+                  <p class="info-item__title">Название</p>
+
+                  <div class="info-item__title-row">
+                    <p class="title-row-base title-row__title">
+                      Полное наименование
+                    </p>
+                    <p class="title-row-base title-row__text">
+                      МУНИЦИПАЛЬНОЕ ПРЕДПРИЯТИЕ ГОРОДСКОГО ПОСЕЛЕНИЯ ЩЁЛКОВО
+                      "ДИРЕКЦИЯ ЕДИНОГО ЗАКАЗЧИКА ЖИЛИЩНО-КОММУНАЛЬНОГО
+                      ХОЗЯЙСТВА"
+                    </p>
+                  </div>
+
+                  <div class="info-item__title-row">
+                    <p class="title-row-base title-row__title">
+                      Сокращенное наименование
+                    </p>
+                    <p class="title-row-base title-row__text">
+                      МП ГПЩ "ДЕЗ ЖКХ"
+                    </p>
+                  </div>
+                </div>
+
+                <!-- Деятельность -->
+                <div class="tab-all-info__item">
+                  <p class="info-item__title">Деятельность</p>
+
+                  <div class="info-item__title-row">
+                    <p class="title-row-base title-row__title">
+                      Тип организации
+                    </p>
+                    <p class="title-row-base title-row__text">
+                      Управление эксплуатацией жилого фонда за вознаграждение
+                      или на договорной основе
+                    </p>
+                  </div>
+
+                  <div class="info-item__title-row">
+                    <p class="title-row-base title-row__title">ОКОПФ</p>
+                    <p class="title-row-base title-row__text">
+                      Муниципальные унитарные предприятия
+                    </p>
+                  </div>
+
+                  <div class="info-item__title-row">
+                    <p class="title-row-base title-row__title">
+                      Система налогообложения
+                    </p>
+                    <p class="title-row-base title-row__text">
+                      Упрощенная система налогооблажения
+                    </p>
+                  </div>
+
+                  <div class="info-item__title-row">
+                    <p class="title-row-base title-row__title">
+                      Тип расчета пени
+                    </p>
+                    <p class="title-row-base title-row__text">155 ЖК РФ</p>
+                  </div>
+                </div>
+
+                <!-- Контакты -->
+                <div class="tab-all-info__item">
+                  <p class="info-item__title">Контакты</p>
+
+                  <div class="info-item__title-row">
+                    <p class="title-row-base title-row__title">Телефон</p>
+                    <p class="title-row-base title-row__text">8(496)5669956</p>
+                  </div>
+
+                  <div class="info-item__title-row">
+                    <p class="title-row-base title-row__title">Факс</p>
+                    <p class="title-row-base title-row__text">8(496)5669956</p>
+                  </div>
+
+                  <div class="info-item__title-row">
+                    <p class="title-row-base title-row__title">Сайт</p>
+                    <p class="title-row-base title-row__text">urrobot.net</p>
+                  </div>
+
+                  <div class="info-item__title-row">
+                    <p class="title-row-base title-row__title">
+                      E-mail приемной
+                    </p>
+                    <p class="title-row-base title-row__text">
+                      info@urrobot.net
+                    </p>
+                  </div>
+
+                  <div class="info-item__title-row">
+                    <p class="title-row-base title-row__title">
+                      E-mail бухгалтерии
+                    </p>
+                    <p class="title-row-base title-row__text">
+                      buh@urrobot.net
+                    </p>
+                  </div>
+                </div>
+
+                <!-- Дирекция -->
+                <div class="tab-all-info__item">
+                  <p class="info-item__title">Дирекция</p>
+
+                  <div class="info-item__title-row">
+                    <p class="title-row-base title-row__title">
+                      Генеральный директор
+                    </p>
+                    <p class="title-row-base title-row__text">
+                      Маскалев Александр Николаевич
+                    </p>
+                  </div>
+
+                  <div class="info-item__title-row">
+                    <p class="title-row-base title-row__title">
+                      Основание полномочий подписанта
+                    </p>
+                    <p class="title-row-base title-row__text">Устав</p>
+                  </div>
+
+                  <div class="info-item__title-row">
+                    <p class="title-row-base title-row__title">
+                      Представитель по доверенности
+                    </p>
+                    <p class="title-row-base title-row__text">
+                      Пупкин Сергей Петрович
+                    </p>
+                  </div>
+                </div>
+
+                <!-- Адреса -->
+                <div class="tab-all-info__item">
+                  <p class="info-item__title">Адреса</p>
+
+                  <div class="info-item__title-row">
+                    <p class="title-row-base title-row__title">
+                      Юридический адрес
+                    </p>
+                    <p class="title-row-base title-row__text">
+                      141108, обл. Московская, г. Щелково, ул. Краснознаменская,
+                      д.3
+                    </p>
+                  </div>
+
+                  <div class="info-item__title-row">
+                    <p class="title-row-base title-row__title">
+                      Фактический адрес
+                    </p>
+                    <p class="title-row-base title-row__text">
+                      141108, обл. Московская, г. Щелково, ул. Краснознаменская,
+                      д.3
+                    </p>
+                  </div>
+
+                  <div class="info-item__title-row">
+                    <p class="title-row-base title-row__title">
+                      Почтовый адрес
+                    </p>
+                    <p class="title-row-base title-row__text">141108</p>
+                  </div>
+                </div>
+
+                <!-- Реквизиты -->
+                <div class="tab-all-info__item">
+                  <p class="info-item__title">Реквизиты</p>
+
+                  <div class="info-item__title-row">
+                    <p class="title-row-base title-row__title">ИНН</p>
+                    <p class="title-row-base title-row__text">5050026941</p>
+                  </div>
+
+                  <div class="info-item__title-row">
+                    <p class="title-row-base title-row__title">КПП</p>
+                    <p class="title-row-base title-row__text">505001001</p>
+                  </div>
+
+                  <div class="info-item__title-row">
+                    <p class="title-row-base title-row__title">ОГРН</p>
+                    <p class="title-row-base title-row__text">1035010203800</p>
+                  </div>
+
+                  <div class="info-item__title-row">
+                    <p class="title-row-base title-row__title">
+                      Расчетный счет
+                    </p>
+                    <p class="title-row-base title-row__text">
+                      40702810608360001624
+                    </p>
+                  </div>
+
+                  <div class="info-item__title-row">
+                    <p class="title-row-base title-row__title">БИК</p>
+                    <p class="title-row-base title-row__text">044525297</p>
+                  </div>
+
+                  <div class="info-item__title-row">
+                    <p class="title-row-base title-row__title">
+                      Полное наименование банка
+                    </p>
+                    <p class="title-row-base title-row__text">
+                      ФИЛИАЛ ЦЕНТРАЛЬНЫЙ ПАО БАНКА "ФК ОТКРЫТИЕ"
+                    </p>
+                  </div>
+
+                  <div class="info-item__title-row">
+                    <p class="title-row-base title-row__title">
+                      Корреспондентский счет
+                    </p>
+                    <p class="title-row-base title-row__text">
+                      30101810945250000297
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Контейнер для вкладки "Общая информация (редактирование)" -->
+              <div id="tab-all-info__edit" class="tab-all-info__edit">
+                <!-- Шапка -->
+                <div class="tab-all-info__header">
+                  <p>Общие данные организации</p>
+                </div>
+
+                <!-- Название -->
+                <div class="tab-all-info__item">
+                  <p class="info-item__title">Название</p>
+
+                  <div class="info-item__title-row">
+                    <p class="title-row-base title-row__title">
+                      Полное наименование
+                    </p>
+                    <p class="title-row-base title-row__text">
+                      МУНИЦИПАЛЬНОЕ ПРЕДПРИЯТИЕ ГОРОДСКОГО ПОСЕЛЕНИЯ ЩЁЛКОВО
+                      "ДИРЕКЦИЯ ЕДИНОГО ЗАКАЗЧИКА ЖИЛИЩНО-КОММУНАЛЬНОГО
+                      ХОЗЯЙСТВА"
+                    </p>
+                  </div>
+
+                  <div class="info-item__title-row">
+                    <p class="title-row-base title-row__title">
+                      Сокращенное наименование
+                    </p>
+                    <p class="title-row-base title-row__text">
+                      МП ГПЩ "ДЕЗ ЖКХ"
+                    </p>
+                  </div>
+                </div>
+
+                <!-- Деятельность -->
+                <div class="tab-all-info__item">
+                  <p class="info-item__title">Деятельность</p>
+
+                  <div class="info-item__title-row">
+                    <p class="title-row-base title-row__title">
+                      Тип организации
+                    </p>
+
+                    <div class="title-row-base title-row__select">
+                      <button class="dropdown__button">
+                        Управление эксплуатацией жилого фонда за вознаграждение
+                        или на договорной основе
+                      </button>
+                      <ul class="dropdown__list">
+                        <li class="dropdown__list-item" data-value="value1">
+                          Управление эксплуатацией жилого фонда за
+                          вознаграждение или на договорной основе
+                        </li>
+                        <li class="dropdown__list-item" data-value="value2">
+                          Тип расчета пени 2
+                        </li>
+                        <li class="dropdown__list-item" data-value="value3">
+                          Тип расчета пени 3
+                        </li>
+                      </ul>
+                      <input
+                        type="text"
+                        name="select-category"
+                        value="value1"
+                        class="dropdown__input-hidden"
+                      />
+                    </div>
+                  </div>
+
+                  <div class="info-item__title-row">
+                    <p class="title-row-base title-row__title">ОКОПФ</p>
+                    <p class="title-row-base title-row__text">
+                      Муниципальные унитарные предприятия
+                    </p>
+                  </div>
+
+                  <div class="info-item__title-row">
+                    <p class="title-row-base title-row__title">
+                      Система налогообложения
+                    </p>
+
+                    <div class="title-row-base title-row__select">
+                      <button class="dropdown__button">
+                        Упрощенная система налогооблажения
+                      </button>
+                      <ul class="dropdown__list">
+                        <li class="dropdown__list-item" data-value="value1">
+                          Упрощенная система налогооблажения
+                        </li>
+                        <li class="dropdown__list-item" data-value="value2">
+                          Тип расчета пени 2
+                        </li>
+                        <li class="dropdown__list-item" data-value="value3">
+                          Тип расчета пени 3
+                        </li>
+                      </ul>
+                      <input
+                        type="text"
+                        name="select-category"
+                        value="value1"
+                        class="dropdown__input-hidden"
+                      />
+                    </div>
+                  </div>
+
+                  <div class="info-item__title-row">
+                    <p class="title-row-base title-row__title">
+                      Тип расчета пени
+                    </p>
+
+                    <div class="title-row-base title-row__select">
+                      <button class="dropdown__button">155 ЖК РФ</button>
+                      <ul class="dropdown__list">
+                        <li class="dropdown__list-item" data-value="value1">
+                          155 ЖК РФ
+                        </li>
+                        <li class="dropdown__list-item" data-value="value2">
+                          Тип расчета пени 2
+                        </li>
+                        <li class="dropdown__list-item" data-value="value3">
+                          Тип расчета пени 3
+                        </li>
+                      </ul>
+                      <input
+                        type="text"
+                        name="select-category"
+                        value="value1"
+                        class="dropdown__input-hidden"
+                      />
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Контакты -->
+                <div class="tab-all-info__item">
+                  <p class="info-item__title">Контакты</p>
+
+                  <div class="info-item__title-row">
+                    <p class="title-row-base title-row__title">Телефон</p>
+
+                    <input
+                      id="tel"
+                      type="tel"
+                      class="title-row-base title-row__input"
+                      placeholder="Введите текст..."
+                      value="8(496)5669956"
+                    />
+
+                    <label for="tel" class="title-row__label"></label>
+                  </div>
+
+                  <div class="info-item__title-row">
+                    <p class="title-row-base title-row__title">Факс</p>
+
+                    <input
+                      id="fax"
+                      type="tel"
+                      class="title-row-base title-row__input"
+                      placeholder="Введите текст..."
+                      value="8(496)5669956"
+                    />
+
+                    <label for="fax" class="title-row__label"></label>
+                  </div>
+
+                  <div class="info-item__title-row">
+                    <p class="title-row-base title-row__title">Сайт</p>
+
+                    <input
+                      id="website"
+                      type="url"
+                      class="title-row-base title-row__input"
+                      placeholder="Введите текст..."
+                      value="urrobot.net"
+                    />
+
+                    <label for="website" class="title-row__label"></label>
+                  </div>
+
+                  <div class="info-item__title-row">
+                    <p class="title-row-base title-row__title">
+                      E-mail приемной
+                    </p>
+
+                    <input
+                      id="email1"
+                      type="email"
+                      class="title-row-base title-row__input"
+                      placeholder="Введите текст..."
+                      value="info@urrobot.net"
+                    />
+
+                    <label for="email1" class="title-row__label"></label>
+                  </div>
+
+                  <div class="info-item__title-row">
+                    <p class="title-row-base title-row__title">
+                      E-mail бухгалтерии
+                    </p>
+
+                    <input
+                      id="email2"
+                      type="email"
+                      class="title-row-base title-row__input"
+                      placeholder="Введите текст..."
+                      value="buh@urrobot.net"
+                    />
+
+                    <label for="email2" class="title-row__label"></label>
+                  </div>
+                </div>
+
+                <!-- Дирекция -->
+                <div class="tab-all-info__item">
+                  <p class="info-item__title">Дирекция</p>
+
+                  <div class="info-item__title-row">
+                    <p class="title-row-base title-row__title">
+                      Генеральный директор
+                    </p>
+                    <p class="title-row-base title-row__text">
+                      Маскалев Александр Николаевич
+                    </p>
+                  </div>
+
+                  <div class="info-item__title-row">
+                    <p class="title-row-base title-row__title">
+                      Основание полномочий подписанта
+                    </p>
+                    <div class="title-row-base title-row__select">
+                      <button class="dropdown__button">Устав</button>
+                      <ul class="dropdown__list">
+                        <li class="dropdown__list-item" data-value="value1">
+                          Устав
+                        </li>
+                        <li class="dropdown__list-item" data-value="value2">
+                          Тип расчета пени 2
+                        </li>
+                        <li class="dropdown__list-item" data-value="value3">
+                          Тип расчета пени 3
+                        </li>
+                      </ul>
+                      <input
+                        type="text"
+                        name="select-category"
+                        value="value1"
+                        class="dropdown__input-hidden"
+                      />
+                    </div>
+                  </div>
+
+                  <div class="info-item__title-row">
+                    <p class="title-row-base title-row__title">
+                      Представитель по доверенности
+                    </p>
+
+                    <input
+                      id="attorney-in-fact"
+                      type="text"
+                      class="title-row-base title-row__input"
+                      placeholder="Введите текст..."
+                      value="Пупкин Сергей Петрович"
+                    />
+
+                    <label
+                      for="attorney-in-fact"
+                      class="title-row__label"
+                    ></label>
+                  </div>
+                </div>
+
+                <!-- Адреса -->
+                <div class="tab-all-info__item">
+                  <p class="info-item__title">Адреса</p>
+
+                  <div class="info-item__title-row">
+                    <p class="title-row-base title-row__title">
+                      Юридический адрес
+                    </p>
+
+                    <input
+                      id="ur-adress"
+                      type="text"
+                      class="title-row-base title-row__input title-row__big"
+                      placeholder="Введите текст..."
+                      value="141108, обл. Московская, г. Щелково, ул. Краснознаменская, д.3"
+                    />
+
+                    <label
+                      for="ur-adress"
+                      class="title-row__label title-row__big"
+                    ></label>
+                  </div>
+
+                  <div class="info-item__title-row">
+                    <p class="title-row-base title-row__title">
+                      Фактический адрес
+                    </p>
+                    <p class="title-row-base title-row__text">
+                      141108, обл. Московская, г. Щелково, ул. Краснознаменская,
+                      д.3
+                    </p>
+                  </div>
+
+                  <div class="info-item__title-row">
+                    <p class="title-row-base title-row__title">
+                      Почтовый адрес
+                    </p>
+                    <p class="title-row-base title-row__text">141108</p>
+                  </div>
+                </div>
+
+                <!-- Реквизиты -->
+                <div class="tab-all-info__item">
+                  <p class="info-item__title">Реквизиты</p>
+
+                  <div class="info-item__title-row">
+                    <p class="title-row-base title-row__title">ИНН</p>
+                    <p class="title-row-base title-row__text">5050026941</p>
+                  </div>
+
+                  <div class="info-item__title-row">
+                    <p class="title-row-base title-row__title">КПП</p>
+                    <p class="title-row-base title-row__text">505001001</p>
+                  </div>
+
+                  <div class="info-item__title-row">
+                    <p class="title-row-base title-row__title">ОГРН</p>
+
+                    <input
+                      id="ogrn"
+                      type="text"
+                      class="title-row-base title-row__input"
+                      placeholder="Введите текст..."
+                      value="1035010203800"
+                    />
+
+                    <label for="ogrn" class="title-row__label"></label>
+                  </div>
+
+                  <div class="info-item__title-row">
+                    <p class="title-row-base title-row__title">
+                      Расчетный счет
+                    </p>
+
+                    <input
+                      id="raschet"
+                      type="text"
+                      class="title-row-base title-row__input"
+                      placeholder="Введите текст..."
+                      value="40702810608360001624"
+                    />
+
+                    <label for="raschet" class="title-row__label"></label>
+                  </div>
+
+                  <div class="info-item__title-row">
+                    <p class="title-row-base title-row__title">БИК</p>
+
+                    <input
+                      id="bik"
+                      type="text"
+                      class="title-row-base title-row__input"
+                      placeholder="Введите текст..."
+                      value="044525297"
+                    />
+
+                    <label for="bik" class="title-row__label"></label>
+                  </div>
+
+                  <div class="info-item__title-row">
+                    <p class="title-row-base title-row__title">
+                      Полное наименование банка
+                    </p>
+
+                    <input
+                      id="full_name_bank"
+                      type="text"
+                      class="title-row-base title-row__input title-row__big"
+                      placeholder="Введите текст..."
+                      value='ФИЛИАЛ ЦЕНТРАЛЬНЫЙ ПАО БАНКА "ФК ОТКРЫТИЕ"'
+                    />
+
+                    <label
+                      for="full_name_bank"
+                      class="title-row__label title-row__big"
+                    ></label>
+                  </div>
+
+                  <div class="info-item__title-row">
+                    <p class="title-row-base title-row__title">
+                      Корреспондентский счет
+                    </p>
+
+                    <input
+                      id="kopchet"
+                      type="text"
+                      class="title-row-base title-row__input"
+                      placeholder="Введите текст..."
+                      value="30101810945250000297"
+                    />
+
+                    <label for="kopchet" class="title-row__label"></label>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Контейнер для вкладки "Сотрудники" -->
+            <div class="tab tab-staff">
+              <div class="tab-staff__heading">
+                <h2>Сотрудники</h2>
+                <button class="btn btn-tab-bridht" onclick="addStaff()">
+                  <p>Добавить сотрудника</p>
+                </button>
+              </div>
+              <!-- Контейнер для вкладки "Сотрудники (просмотр)" -->
+              <div id="tab-staff__view" class="tab-staff__view tab-isactive">
+                <div class="tab__content-default">
+                  <table>
+                    <tr>
+                      <th class="tab-name">ФИО</th>
+                      <th class="tab-pos">Должность</th>
+                      <th class="tab-tel">Моб. телефон</th>
+                      <th class="tab-email">Email</th>
+                    </tr>
+                    <tr>
+                      <td class="tab-name">Иванов Иван Иванович</td>
+                      <td class="tab-pos">Заместитель директора</td>
+                      <td class="tab-tel">8(496)5669956</td>
+                      <td class="tab-email">info@urrobot.net</td>
+                    </tr>
+                    <tr>
+                      <td class="tab-name">Иванов Иван Иванович</td>
+                      <td class="tab-pos">Заместитель директора</td>
+                      <td class="tab-tel">8(496)5669956</td>
+                      <td class="tab-email">info@urrobot.net</td>
+                    </tr>
+                    <tr>
+                      <td class="tab-name">Иванов Иван Иванович</td>
+                      <td class="tab-pos">Заместитель директора</td>
+                      <td class="tab-tel">8(496)5669956</td>
+                      <td class="tab-email">info@urrobot.net</td>
+                    </tr>
+                  </table>
+                </div>
+              </div>
+
+              <!-- Контейнер для вкладки "Сотрудники (редактирование)" -->
+              <div id="tab-staff__edit" class="tab-staff__edit">
+                <div class="tab__content-adding">
+                  <table>
+                    <tr>
+                      <th class="tab-name">ФИО</th>
+                      <th class="tab-pos">Должность</th>
+                      <th class="tab-tel">Моб. телефон</th>
+                      <th class="tab-email">Email</th>
+                      <td class="tab-pencil"></td>
+                      <td class="tab-check"></td>
+                    </tr>
+                    <tr>
+                      <td class="tab-name">Иванов Иван Иванович</td>
+                      <td class="tab-pos">Заместитель директора</td>
+                      <td class="tab-tel">8(496)5669956</td>
+                      <td class="tab-email">info@urrobot.net</td>
+                      <td class="tab-pencil">
+                        <div class="tab-pencil-img"></div>
+                      </td>
+                      <td class="tab-check">
+                        <div class="tab-check-img"></div>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td class="tab-name">Иванов Иван Иванович</td>
+                      <td class="tab-pos">Заместитель директора</td>
+                      <td class="tab-tel">8(496)5669956</td>
+                      <td class="tab-email">info@urrobot.net</td>
+                      <td class="tab-pencil">
+                        <div class="tab-pencil-img"></div>
+                      </td>
+                      <td class="tab-check">
+                        <div class="tab-check-img"></div>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td class="tab-name">Иванов Иван Иванович</td>
+                      <td class="tab-pos">Заместитель директора</td>
+                      <td class="tab-tel">8(496)5669956</td>
+                      <td class="tab-email">info@urrobot.net</td>
+                      <td class="tab-pencil">
+                        <div class="tab-pencil-img"></div>
+                      </td>
+                      <td class="tab-check">
+                        <div class="tab-check-img"></div>
+                      </td>
+                    </tr>
+                  </table>
+                </div>
+              </div>
+            </div>
+
+            <!-- Контейнер для вкладки "Документы" -->
+            <div class="tab tab-docs">
+              <!-- Контейнер для вкладки "Сотрудники (просмотр)" -->
+              <div
+                id="tab-docs__view"
+                class="tab-docs__view tab-isactive"
+              ></div>
+
+              <!-- Контейнер для вкладки "Сотрудники (редактирование)" -->
+              <div id="tab-docs__edit" class="tab-docs__edit"></div>
+            </div>
+          </div>
+
+          <!-- Контейнер для вкладки "Добавить сотрудника" -->
+          <div id="addStaff" class="popup__content-addStaff">
+            <div class="addStaff-inner">
+              <div class="popup__content-header">
+                <p class="content__header-title">Добавление сотрудника</p>
+                <button class="popup__close" onclick="addStaff()">
+                  <img src="icons/close-icon.png" alt="close-icon" />
+                </button>
+              </div>
+
+              <div class="addStaff-block">
+                <div class="input">
+                  <label for="f-name">Имя</label><br />
+                  <input type="text" id="f-name" name="f-name" value="Иван" />
+                </div>
+
+                <div class="input">
+                  <label for="surname">Фамилия</label><br />
+                  <input
+                    type="text"
+                    id="surname"
+                    name="surname"
+                    value="Иванов"
+                  />
+                </div>
+
+                <div class="input">
+                  <label for="position">Должность</label><br />
+                  <input
+                    type="text"
+                    id="rosition"
+                    name="oositione"
+                    value="Заместитель директора"
+                  />
+                </div>
+
+                <div class="input addStaff-input-tel">
+                  <label for="name">Моб. телефон</label><br />
+                  <input
+                    type="tel"
+                    id="name"
+                    name="name"
+                    value="8(496)5669956"
+                  />
+                </div>
+              </div>
+
+              <div class="addStaff-block">
+                <div class="input">
+                  <label for="email">Email</label><br />
+                  <input
+                    type="email"
+                    id="email"
+                    name="email"
+                    value="info@urrobot.net"
+                  />
+                </div>
+
+                <div class="input">
+                  <label for="password">Пароль</label><br />
+                  <input
+                    type="password"
+                    id="password"
+                    name="password"
+                    placeholder="Введите пароль"
+                  />
+                </div>
+              </div>
+
+              <div class="addStaff-block addStaff-block-3">
+                <div class="input">
+                  <label>Выберите роль сотрудника</label><br />
+                  <select class="select-css">
+                    <option>Роли</option>
+                    <option>Значение 1</option>
+                    <option>Значение 2</option>
+                    <option>Значение 3</option>
+                  </select>
+                </div>
+              </div>
+
+              <div class="addStaff-footer">
+                <div class="addStaff-footer-L">
+                  <p>Выберите доступы для сотрудника:</p>
+                  <div class="footer-L-block">
+                    <div>
+                      <input
+                        type="checkbox"
+                        id="vehicle1"
+                        name="vehicle1"
+                        value="Bike"
+                      />
+                      <label for="vehicle1">Модуль 1</label><br />
+                      <input
+                        type="checkbox"
+                        id="vehicle1"
+                        name="vehicle1"
+                        value="Bike"
+                      />
+                      <label for="vehicle1">Модуль 2</label><br />
+                      <input
+                        type="checkbox"
+                        id="vehicle1"
+                        name="vehicle1"
+                        value="Bike"
+                      />
+                      <label for="vehicle1">Модуль 3</label><br />
+                    </div>
+
+                    <div>
+                      <input
+                        type="checkbox"
+                        id="vehicle1"
+                        name="vehicle1"
+                        value="Bike"
+                      />
+                      <label for="vehicle1">Модуль 4</label><br />
+                      <input
+                        type="checkbox"
+                        id="vehicle1"
+                        name="vehicle1"
+                        value="Bike"
+                      />
+                      <label for="vehicle1">Модуль 5</label><br />
+                      <input
+                        type="checkbox"
+                        id="vehicle1"
+                        name="vehicle1"
+                        value="Bike"
+                      />
+                      <label for="vehicle1">Модуль 6</label><br />
+                    </div>
+                  </div>
+                </div>
+                <div class="addStaff-footer-R">
+                  <button class="btn btn-dark">Сохранить</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- /.container -->
+
+    <section id="sidebar-360" class="sidebar-360">
+      <button
+        class="sidebar__item-360"
+        onclick="sidebarBtn360(this)"
+        type="button"
+      >
+        <div class="sidebar__item-img img1"></div>
+      </button>
+
+      <button
+        class="sidebar__item-360"
+        onclick="sidebarBtn360(this)"
+        type="button"
+      >
+        <div class="sidebar__item-img img2"></div>
+      </button>
+
+      <button
+        class="sidebar__item-360"
+        onclick="sidebarBtn360(this)"
+        type="button"
+      >
+        <div class="sidebar__item-img img3"></div>
+      </button>
+
+      <button
+        class="sidebar__item-360"
+        onclick="sidebarBtn360(this)"
+        type="button"
+      >
+        <div class="sidebar__item-img img4"></div>
+      </button>
+
+      <button
+        class="sidebar__item-360"
+        onclick="sidebarBtn360(this)"
+        type="button"
+      >
+        <div class="sidebar__item-img img5"></div>
+      </button>
+    </section>
+    <!-- /.sidebar-360 -->
+
+    <script src="js/index.js"></script>
+    <script src="js/header.js"></script>
+    <script src="js/popup.js"></script>
+    <script src="js/sidebar.js"></script>
+    <script src="js/table.js"></script>
+  </body>
+</html>
