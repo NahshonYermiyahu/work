@@ -2020,13 +2020,28 @@
 
               <div class="addStaff-block addStaff-block-3">
                 <div class="input">
-                  <label>Выберите роль сотрудника</label><br />
-                  <select class="select-css">
-                    <option>Роли</option>
-                    <option>Значение 1</option>
-                    <option>Значение 2</option>
-                    <option>Значение 3</option>
-                  </select>
+                  <label>Выберите роль сотрудника</label>
+
+                  <div class="title-row__select">
+                    <button class="dropdown__button">Роли</button>
+                    <ul class="dropdown__list">
+                      <li class="dropdown__list-item" data-value="value1">
+                        Значение 1
+                      </li>
+                      <li class="dropdown__list-item" data-value="value2">
+                        Значение 2
+                      </li>
+                      <li class="dropdown__list-item" data-value="value3">
+                        Значение 3
+                      </li>
+                    </ul>
+                    <input
+                      type="text"
+                      name="select-category"
+                      value=""
+                      class="dropdown__input-hidden"
+                    />
+                  </div>
                 </div>
               </div>
 
