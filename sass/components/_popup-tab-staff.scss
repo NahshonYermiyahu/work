@@ -1,7 +1,7 @@
 // .popup .popup__content.edit-company .popup__content-items .tab
 .tab-staff {
   width: 100%;
-  height: 499px;
+  height: 501px;
 
   .tab-staff__heading {
     height: 120px;
@@ -20,8 +20,20 @@
     top: 120px;
 
     .tab__content-default {
-      height: max-content;
-      padding: 10px 50px 30px 50px;
+      padding: 10px 0 30px 50px;
+
+      .staff-table-body {
+        height: 285px;
+        overflow-x: hidden;
+
+        @media only screen and (max-width: 1280px) {
+          height: 160px;
+        }
+
+        @media only screen and (max-width: 1024px) {
+          height: 285px;
+        }
+      }
 
       table {
         border-collapse: collapse;
@@ -30,6 +42,7 @@
         line-height: 15px;
         letter-spacing: 0.04em;
         text-align: left;
+        table-layout: fixed;
 
         tr {
           height: 55px;
@@ -37,6 +50,11 @@
           .tab-name {
             width: 277px;
             padding-right: 56px;
+
+            @media only screen and (max-width: 1024px) {
+              padding-right: 40px;
+              width: 260px;
+            }
           }
 
           .tab-pos {
@@ -47,12 +65,27 @@
           .tab-tel {
             width: 180px;
             padding-right: 59px;
+
+            @media only screen and (max-width: 1024px) {
+              width: 150px;
+              padding-right: 30px;
+            }
           }
 
           .tab-email {
             width: 177px;
           }
         }
+      }
+
+      ::-webkit-scrollbar {
+        width: 5px;
+        height: 70px;
+      }
+
+      ::-webkit-scrollbar-thumb {
+        background: #21317a;
+        border-radius: 2px;
       }
     }
   }
@@ -90,8 +123,20 @@
     }
 
     .tab__content-adding {
-      height: max-content;
-      padding: 10px 50px 30px 50px;
+      padding: 10px 0 30px 50px;
+
+      .staff-table-body {
+        height: 285px;
+        overflow-x: hidden;
+
+        @media only screen and (max-width: 1280px) {
+          height: 160px;
+        }
+
+        @media only screen and (max-width: 1024px) {
+          height: 285px;
+        }
+      }
 
       table {
         border-collapse: collapse;
@@ -107,6 +152,11 @@
           .tab-name {
             width: 277px;
             padding-right: 56px;
+
+            @media only screen and (max-width: 1024px) {
+              padding-right: 40px;
+              width: 260px;
+            }
           }
 
           .tab-pos {
@@ -117,6 +167,11 @@
           .tab-tel {
             width: 180px;
             padding-right: 59px;
+
+            @media only screen and (max-width: 1024px) {
+              width: 150px;
+              padding-right: 30px;
+            }
           }
 
           .tab-email {
@@ -144,6 +199,16 @@
             }
           }
         }
+      }
+
+      ::-webkit-scrollbar {
+        width: 5px;
+        height: 70px;
+      }
+
+      ::-webkit-scrollbar-thumb {
+        background: #21317a;
+        border-radius: 2px;
       }
     }
   }

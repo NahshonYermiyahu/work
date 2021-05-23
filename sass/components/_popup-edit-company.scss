@@ -4,6 +4,20 @@
   height: 640px;
   position: relative;
 
+  @media only screen and (max-width: 1280px) {
+    height: 500px;
+  }
+
+  @media only screen and (max-width: 1024px) {
+    width: 900px;
+    height: 640px;
+  }
+
+  @media only screen and (max-width: 360px) {
+    width: 320px;
+    height: 568px;
+  }
+
   .popup__content-header {
     .content__header-btns {
       width: 240px;
@@ -27,9 +41,10 @@
     margin-top: 21px;
 
     .popup-edit__header {
-      width: 900px;
+      // width: 900px;
       height: 38px;
-      margin: 0 auto;
+      // margin: 0 auto;
+      margin: 0 30px 0 30px;
       border-bottom: 1px solid #cbd0e7;
 
       display: flex;
@@ -80,7 +95,7 @@
         }
 
         &.popup-edit__btn-all-info {
-          margin-left: 10px;
+          margin-left: 15px;
         }
 
         &.popup-edit__btn-staff {
@@ -126,7 +141,7 @@
         opacity: 1;
         visibility: visible;
         z-index: 50;
-        transition: all .3s linear;
+        transition: all 0.3s linear;
       }
     }
   }

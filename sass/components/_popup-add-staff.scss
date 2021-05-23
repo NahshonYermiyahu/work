@@ -18,116 +18,224 @@
   }
 
   .addStaff-inner {
-    margin: 102px auto auto;
+    margin: 100px auto 30px auto;
     width: 900px;
     height: 507px;
     border-radius: 10px;
     transform: scale(0);
     transition: all 0.3s;
-    padding-left: 30px;
-    padding-bottom: 30px;
+
+    @media only screen and (max-width: 1280px) {
+      width: 900px;
+      height: 472px;
+    }
+
+    @media only screen and (max-width: 1024px) {
+      width: 852px;
+      height: 507px;
+    }
+
+    @media only screen and (max-width: 360px) {
+      width: 320px;
+      height: 906px;
+      margin: 20px;
+    }
 
     .popup__content-header {
       height: auto;
-      padding-bottom: 20px;
+      padding-left: 30px;
+
+      @media only screen and (max-width: 360px) {
+        padding-left: 0;
+      }
 
       .content__header-title {
         margin-left: 0;
-      }
-    }
+        font-size: 18px;
+        font-weight: 600;
+        line-height: 22px;
+        letter-spacing: 0;
+        text-align: left;
 
-    .addStaff-block {
-      display: flex;
-      justify-content: flex-start;
-      align-items: center;
-      padding-top: 17px;
-      margin-right: 30px;
-
-      input {
-        margin-top: 10px;
-        margin-right: 20px;
-      }
-
-      .addStaff-input-tel {
-        margin-right: 0;
-
-        input {
-          width: 119px;
+        @media only screen and (max-width: 360px) {
+          margin-top: 40px;
+          margin-left: 47px;
         }
       }
     }
 
-    .addStaff-block-3 {
-      .title-row__select {
-        margin-top: 10px;
-        width: 462px;
+    .addStaff-blocks {
+      margin: 20px 30px 30px 30px;
 
-        .dropdown__button {
-          height: 40px;
-          border-radius: 10px;
-          padding-left: 10px;
-          font-size: 12px;
-          font-weight: 500;
-          line-height: 15px;
-          letter-spacing: 0.04em;
+      @media only screen and (max-width: 1280px) {
+        margin-top: 15px;
+      }
 
-          &::after {
-            right: 10px;
+      @media only screen and (max-width: 1024px) {
+        margin: 20px 20px 30px 20px;
+      }
+
+      @media only screen and (max-width: 360px) {
+        margin: 30px 15px 30px 15px;
+      }
+
+      .addStaff-block {
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        padding-top: 20px;
+
+        @media only screen and (max-width: 1280px) {
+          padding-top: 15px;
+        }
+
+        @media only screen and (max-width: 1024px) {
+          padding-top: 20px;
+        }
+
+        @media only screen and (max-width: 360px) {
+          display: block;
+          padding-top: 0;
+        }
+
+        .input {
+          margin-right: 20px;
+
+          @media only screen and (max-width: 1024px) {
+            margin-right: 10px;
+          }
+
+          @media only screen and (max-width: 360px) {
+            margin-right: 0;
+            margin-top: 15px;
+          }
+
+          input {
+            margin-top: 10px;
+
+            @media only screen and (max-width: 360px) {
+              width: 100%;
+            }
           }
         }
-      }
-    }
 
-    .addStaff-footer {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      padding-top: 17px;
-      margin-right: 30px;
+        .addStaff-input-tel {
+          margin-right: 0;
 
-      .addStaff-footer-L {
-        height: 120px;
+          input {
+            width: 119px;
 
-        .addStaff-footer-heading {
-          font-size: 12px;
-          font-weight: 500;
-          line-height: 15px;
-          letter-spacing: 0.04em;
-          text-align: left;
-        }
-
-        .footer-L-block {
-          display: flex;
-
-          .checkbox-items {
-            margin-right: 30px;
-
-            .checkbox-item {
-              display: flex;
-              justify-content: flex-start;
-              align-items: center;
-              margin-top: 20px;
-
-              .checkbox {
-                margin: 0;
-              }
-
-              p {
-                font-weight: 500;
-                font-size: 12px;
-                line-height: 15px;
-                letter-spacing: 0.04em;
-                margin-left: 10px;
-              }
+            @media only screen and (max-width: 360px) {
+              width: 100%;
             }
           }
         }
       }
 
-      .addStaff-footer-R {
-        width: 160px;
-        height: 120px;
-        padding-top: 60px;
+      .addStaff-block-3 {
+        @media only screen and (max-width: 1280px) {
+          padding-top: 20px;
+        }
+
+        @media only screen and (max-width: 1024px) {
+          padding-top: 25px;
+        }
+
+        .title-row__select {
+          width: 462px;
+          margin-top: 10px;
+
+          .dropdown__button {
+            height: 40px;
+            border-radius: 10px;
+            padding-left: 10px;
+            font-size: 12px;
+            font-weight: 500;
+            line-height: 15px;
+            letter-spacing: 0.04em;
+
+            &::after {
+              right: 10px;
+            }
+          }
+        }
+      }
+
+      .addStaff-footer {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding-top: 20px;
+
+        @media only screen and (max-width: 1280px) {
+          padding-top: 15px;
+        }
+
+        @media only screen and (max-width: 1024px) {
+          padding-top: 20px;
+        }
+
+        @media only screen and (max-width: 360px) {
+          display: block;
+        }
+
+        .addStaff-footer-L {
+          .addStaff-footer-heading {
+            font-size: 12px;
+            font-weight: 500;
+            line-height: 15px;
+            letter-spacing: 0.04em;
+            text-align: left;
+          }
+
+          .footer-L-block {
+            display: flex;
+
+            .checkbox-items {
+              margin-right: 30px;
+
+              .checkbox-item {
+                display: flex;
+                justify-content: flex-start;
+                align-items: center;
+                margin-top: 20px;
+
+                @media only screen and (max-width: 1280px) {
+                  margin-top: 15px;
+                }
+
+                @media only screen and (max-width: 1024px) {
+                  margin-top: 20px;
+                }
+
+                .checkbox {
+                  margin: 0;
+                }
+
+                p {
+                  font-weight: 500;
+                  font-size: 12px;
+                  line-height: 15px;
+                  letter-spacing: 0.04em;
+                  margin-left: 10px;
+                }
+              }
+            }
+          }
+        }
+
+        .addStaff-footer-R {
+          width: 160px;
+          padding-top: 60px;
+
+          @media only screen and (max-width: 1280px) {
+            padding-top: 45px;
+          }
+
+          @media only screen and (max-width: 1024px) {
+            padding-top: 60px;
+          }
+        }
       }
     }
   }
@@ -146,48 +254,50 @@
         }
       }
 
-      .addStaff-block {
-        .input {
-          input {
-            background-color: #e0e0e0;
-            color: #4f4f4f;
-          }
-
-          input::placeholder {
-            color: #4f4f4f;
-          }
-
-          label {
-            color: #000000;
-          }
-
-          .title-row__select {
-            .dropdown__button {
+      .addStaff-blocks {
+        .addStaff-block {
+          .input {
+            input {
+              background-color: #e0e0e0;
               color: #4f4f4f;
+            }
+
+            input::placeholder {
+              color: #4f4f4f;
+            }
+
+            label {
+              color: #000000;
+            }
+
+            .title-row__select {
+              .dropdown__button {
+                color: #4f4f4f;
+              }
             }
           }
         }
-      }
 
-      .addStaff-block-3 {
-        .title-row__select {
-          .dropdown__button {
-            background-color: #e0e0e0;
+        .addStaff-block-3 {
+          .title-row__select {
+            .dropdown__button {
+              background-color: #e0e0e0;
+            }
           }
         }
-      }
 
-      .addStaff-footer {
-        .addStaff-footer-L {
-          .addStaff-footer-heading {
-            color: #000000;
-          }
+        .addStaff-footer {
+          .addStaff-footer-L {
+            .addStaff-footer-heading {
+              color: #000000;
+            }
 
-          .footer-L-block {
-            .checkbox-items {
-              .checkbox-item {
-                p {
-                  color: #4f4f4f;
+            .footer-L-block {
+              .checkbox-items {
+                .checkbox-item {
+                  p {
+                    color: #4f4f4f;
+                  }
                 }
               }
             }
@@ -211,48 +321,50 @@
         }
       }
 
-      .addStaff-block {
-        .input {
-          input {
-            background-color: #4f4f4f;
-            color: #bdbdbd;
-          }
-
-          input::placeholder {
-            color: #bdbdbd;
-          }
-
-          label {
-            color: #f2f2f2;
-          }
-
-          .title-row__select {
-            .dropdown__button {
+      .addStaff-blocks {
+        .addStaff-block {
+          .input {
+            input {
+              background-color: #4f4f4f;
               color: #bdbdbd;
+            }
+
+            input::placeholder {
+              color: #bdbdbd;
+            }
+
+            label {
+              color: #f2f2f2;
+            }
+
+            .title-row__select {
+              .dropdown__button {
+                color: #bdbdbd;
+              }
             }
           }
         }
-      }
 
-      .addStaff-block-3 {
-        .title-row__select {
-          .dropdown__button {
-            background-color: #4f4f4f;
+        .addStaff-block-3 {
+          .title-row__select {
+            .dropdown__button {
+              background-color: #4f4f4f;
+            }
           }
         }
-      }
 
-      .addStaff-footer {
-        .addStaff-footer-L {
-          .addStaff-footer-heading {
-            color: #f2f2f2;
-          }
+        .addStaff-footer {
+          .addStaff-footer-L {
+            .addStaff-footer-heading {
+              color: #f2f2f2;
+            }
 
-          .footer-L-block {
-            .checkbox-items {
-              .checkbox-item {
-                p {
-                  color: #e0e0e0;
+            .footer-L-block {
+              .checkbox-items {
+                .checkbox-item {
+                  p {
+                    color: #e0e0e0;
+                  }
                 }
               }
             }
