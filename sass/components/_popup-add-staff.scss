@@ -31,14 +31,11 @@
 
     .popup__content-header {
       height: auto;
+      padding-bottom: 20px;
 
       .content__header-title {
         margin-left: 0;
       }
-    }
-
-    .popup__content-header {
-      padding-bottom: 20px;
     }
 
     .addStaff-block {
@@ -52,13 +49,13 @@
         margin-top: 10px;
         margin-right: 20px;
       }
-    }
 
-    .addStaff-input-tel {
-      margin-right: 0;
+      .addStaff-input-tel {
+        margin-right: 0;
 
-      input {
-        width: 119px;
+        input {
+          width: 119px;
+        }
       }
     }
 
@@ -78,7 +75,7 @@
       .addStaff-footer-L {
         height: 120px;
 
-        p {
+        .addStaff-footer-heading {
           font-size: 12px;
           font-weight: 500;
           line-height: 15px;
@@ -89,6 +86,30 @@
 
         .footer-L-block {
           display: flex;
+
+          .checkbox-items {
+            margin-right: 30px;
+
+            .checkbox-item {
+              display: flex;
+              justify-content: flex-start;
+              align-items: center;
+              margin-top: 20px;
+
+              .checkbox {
+                margin: 0;
+              }
+
+              p {
+                font-weight: 500;
+                font-size: 12px;
+                line-height: 15px;
+                letter-spacing: 0.04em;
+                color: #4f4f4f;
+                margin-left: 10px;
+              }
+            }
+          }
         }
       }
 
@@ -99,4 +120,10 @@
       }
     }
   }
+}
+
+.light-theme {
+}
+
+.dark-theme {
 }
